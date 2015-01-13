@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>Ray's Projects</title>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="header"/>
+<div id="nav">
+<h3>
+<ul>
+<!-- <span id="selected"> </span>-->
+<li><a href="index.html">Home</a></li>
+<li><a href="resume.html">Resume</a></li>
+<li><a href="projects.html"><span id="selected">Projects</span></a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</h3>	
+</div>
+
+<div id="section">
+<h2>Project 15619</h2>
+<p>
+Project 15619 was a team project setting up a scalable web service including a HTTP server in the frontend and MySQL (and HBase) databases in the backend with <a href="http://aws.amazon.com/">Amazon Web Service (AWS)</a>. The raw data contained Terabytes of Tweet messages, and the client requests might be a query of what Tweet messages were sent by someone some time. The capability  must be scalable and be able to serve up to thousands of requests per second.
+</p>
+<p>
+In this project, I became familiar with cloud computing, big data, AWS, databases (both SQL and non-SQL(HBase)), and web server (both PHP and Java Servlet). I was in charge of the backend setup including extracting raw data, transporting them to our server node, and then loading them into our databases. Further more, we made lots of efforts on designing our frontend and backend so that they could cooperate and communicate with each other efficiently. This was a contest-based project, so we had to optimize our performance to compete with other teams. Even though our team had no relative experience before and we basically started from scratch, our score still maintain in top 25% due to our hard work, dedication, and collaboration in a smart way.
+</p>
+
+<h2>AI Suite 3</h2>
+<img src="AISuite3.jpg" style="float:right"></img>
+<p>
+<a href="http://promos.asus.com/US/TCO/pages/UserExperience/AISuite.html">ASUS AI Suite 3</a> is an intuitive central hub that provides access to the vast majority of ASUS monitoring and control utilities on your motherboard. Controls for TPU, EPU, DIGI+ VRM and Fan Xpert can all be found in AI Suite 3, which can also be automated on motherboards with 4-Way Optimization.
+</p>
+<p>
+In this project, I led the team to make sure the product looked fancy, and the progress would meet the deadline. Our main job was to cowork the ACPI interface with BIOS team so that we can access the hardware in OS, and to design the software presentation with UI team to make a user-friendly interface. In order to promote the efficiency of my team, I initialized some training courses and encouraged members to share experiences with each other. Moreover, I imported several useful techniques such as refactoring and design pattern, and test driven development to further reduce bugs and improve the performance of our team. In the end, not merely my subordinates and colleagues were appreciated what I did, my boss was also impressived.
+</p>
+
+<h2>GTP</h2>
+<p>
+Gamania Transport Protocol (GTP) was a project with the aim of improving the gaming experience for players. It was an industry-academic collaboration between the <a href="http://www.iis.sinica.edu.tw/index_en.html">Academia Sinica Institute of Information Science (IIS)</a> and <a href="http://www.gamania.com/eng/">Gamania Digital Entertainment</a>, a renowned online game company in Taiwan. The objective was to import effective techniques to reduce or eradicate the annoying lags that occurred when a large number of players were logged on at the same time. Then a Research Assistant at IIS, I was designated to work on the project by my adviser primarily because Gamania had promised to share with us proprietary data (private game logs), potentially a treasure trove for academic research.
+</p>
+<p>
+The first phase was to canvass as much useful information on the server side as possible, and we mandated that the logs must contain information on the time-stamp and size of packets, as well as details such as action type and object identity. Next, we decided to gather the data for Bright Shadow, a popular Massive Multiplayer Online Role Play Game (MMORPG) with as many as 35,000 players logged on at the same time, for it satisfied our requirement for retrieving information from raw data. Thereafter, we analyzed the data collected to identify creative solutions. Since the game had already been released on the market, we could not test our proposed solutions directly during online play, for fear of infringing on the rights and benefits of the players without validating them first. Thus, we implemented our algorithms first on the Network Simulator-2 (ns-2), a tool for simulating by software multiple users on the internet. Personally, I enjoyed this phase the most, because we were afforded the license to dream up every possible scenario and then implement it into the ns-2 to verify if the results were great. We evaluated piggyback (carrying previous packets to prevent delay due to packet loss), peer-to-peer mechanism (send complementary information between clients), and many other creative approaches during this phase.
+</p>
+<p>
+With the evaluation results from ns-2, we finally narrowed down our possible solutions to just one: dividing packets into different types and channels. For example, whenever a character shifted around in the game, the server would notify other players nearby about his/her newest position. As long as the latest coordinates were delivered correctly to the players, it did not matter whether the old coordinates had been lost. This increased performance significantly because packets responsible for tracking the movement of the players accounted for over 40% of the entire network flow. Moreover, we could send unrelated information in separated channels to reduce the penalty for packet loss. For example, a packet for the "Type of Attack" should not have to wait to be activated until a previously lost packet for "Type of Conversation" was received.
+</p>
+<p>
+Since the game made direct use of the Berkeley socket API, we provided a set of API with similar names but with the prefix "GTP" so that they could be easily replaced with our proposed solutions. Moreover, it was implemented in C++ for Windows, so we adopted several powerful object-oriented characteristics of C++ such as polymorphism inheritance for different reliability, as well as highly efficient techniques provided by the Windows kernel, such as completion IO port.
+</p>
+<p>
+Based on our simulations, the results were highly satisfactory. However, it was such a shame we could not publish our results due to the proprietary nature of the project. Nonetheless, I still learned a lot from this project. For example, I learned to brainstorm together with my adviser to come up with creative approaches. I also vastly improved my programming and problem solving skills through designing and coding simulation experiments and implementing everything by myself. The most precious insight I gleaned was that complex algorithms are not necessarily the best ones. Although we had conceived of several highly effective solutions, simply applying a relatively simple one to deal with the bottleneck of the problem suffices for yielding an optimal solution.
+</p>
+</div>
+
+<div id="footer">
+<pre> </pre>
+</div>
+
+</body>
+</html>
